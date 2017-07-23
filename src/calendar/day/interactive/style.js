@@ -6,8 +6,9 @@ import * as defaultStyle from '../../../style';
 //dayItemHeight==22
 export default function styleConstructor(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
-  const dayItemWidth = appStyle.dayItemWidth ? appStyle.dayItemWidth:22;
-  const dayItemHeight = appStyle.dayItemHeight ? appStyle.dayItemWidth:22
+  const dayItemWidth = appStyle.dayItemWidth ? appStyle.dayItemWidth:34;
+  const dayItemHeight = appStyle.dayItemHeight ? appStyle.dayItemWidth:34
+  const textDayFontSize = appStyle.textDayFontSize ? appStyle.textDayFontSize : 16
   return StyleSheet.create({
     wrapper: {
       flex: 1,
@@ -25,6 +26,7 @@ export default function styleConstructor(theme={}) {
       position: 'absolute',
       height: dayItemHeight,
       flexDirection: 'row',
+      alignItems: 'center',
       left: 0,
       right: 0
     },
@@ -37,8 +39,8 @@ export default function styleConstructor(theme={}) {
       flex: 1
     },
     text: {
-      marginTop: 7,
-      fontSize: appStyle.textDayFontSize,
+      
+      fontSize: textDayFontSize,
       fontFamily: appStyle.textDayFontFamily,
       fontWeight: '300',
       color: appStyle.dayTextColor || '#2d4150',
