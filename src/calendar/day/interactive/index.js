@@ -113,7 +113,7 @@ class Day extends Component {
 
     if (this.props.marked) {
       containerStyle.push({
-        borderRadius: (this.theme.dayItemWidth)/2
+        borderRadius: (this.theme.dayItemWidth ?this.theme.dayItemWidth:34 )/2
       });
 
       const flags = this.markingStyle;
