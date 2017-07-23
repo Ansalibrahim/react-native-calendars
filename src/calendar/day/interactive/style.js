@@ -1,8 +1,9 @@
 import {StyleSheet} from 'react-native';
 import * as defaultStyle from '../../../style';
 
-const FILLER_HEIGHT = 34;
-
+//const FILLER_HEIGHT = 22;
+//dayItemWidth=22
+//dayItemHeight==22
 export default function styleConstructor(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
@@ -14,23 +15,23 @@ export default function styleConstructor(theme={}) {
     },
     base: {
       //borderWidth: 1,
-      width: 38,
-      height: FILLER_HEIGHT,
+      width: appStyle.dayItemWidth,
+      height: appStyle.dayItemHeight,
       alignItems: 'center'
     },
     fillers: {
       position: 'absolute',
-      height: FILLER_HEIGHT,
+      height: appStyle.dayItemHeight,
       flexDirection: 'row',
       left: 0,
       right: 0
     },
     leftFiller: {
-      height: FILLER_HEIGHT,
+      height: appStyle.dayItemHeight,
       flex: 1
     },
     rightFiller: {
-      height: FILLER_HEIGHT,
+      height: appStyle.dayItemHeight,
       flex: 1
     },
     text: {
