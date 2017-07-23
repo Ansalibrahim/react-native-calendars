@@ -5,14 +5,14 @@ export default function getStyle(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
     container: {
-      paddingLeft: 5,
-      paddingRight: 5,
+      paddingLeft: 2,
+      paddingRight: 2,
       flex: 1,
       backgroundColor: appStyle.calendarBackground
     },
     week: {
-      marginTop: 7,
-      marginBottom: 7,
+      marginTop: 1,
+      marginBottom: 1,
       flexDirection: 'row',
       justifyContent: 'space-around'
     }
